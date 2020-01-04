@@ -24,7 +24,7 @@ class Sql
 	}
 
 	/*
-	Used for inserting, deleting or updateing rows of an database;
+	Used for inserting, deleting or updating rows of a database.
 
 	$sql_code = The actual code written in SQL for that specific task, prepared statements only
 	$params = An array with the values of the parameters for the prepared statements
@@ -59,7 +59,7 @@ class Sql
 	}
 
 	/*
-	Returns an numerical array with the rows selected from the database;
+	Returns a numerical array with the rows selected from the database;
 	If there are no rows matching the conditions for search the function returns false(boolean);
 
 	$sql_code = The actual code written in SQL for that specific task, prepared statements only
