@@ -23,4 +23,86 @@ $sql = new Sql; //Instantiate a new object
 
 $sql->query("INSERT INTO user(name) VALUES(?)", array("Paul")); //Call a specific method
 ```
+The same technique applied to any other class.
+## Using instructions
+Bellow are going to be listed instruction for every class included in the framework. 
 
+## sql.class.php
+### query method
+Used for inserting, deleting or updating rows of a database.
+
+$sql_code = The actual code written in SQL for that specific task, prepared statements only
+
+$params = An array with the values of the parameters for the prepared statements
+```php
+require_once("sql.class.php"); //Include the specific ".class.php" file
+$sql = new Sql; //Instantiate a new object
+
+$sql->query($sql_code, $params); //Call a specific method
+```
+### fetch_assoc method
+Returns an associative array with the rows selected from the database.
+ If there are no rows matching the conditions for search the function returns false(boolean);
+
+$sql_code = The actual code written in SQL for that specific task, prepared statements only
+
+$params = An array with the values of the parameters for the prepared statements
+```php
+require_once("sql.class.php"); //Include the specific ".class.php" file
+$sql = new Sql; //Instantiate a new object
+
+$sql->fetch_assoc($sql_code, $params); //Call a specific method
+```
+
+### fetch_num method
+Returns a numerical array with the rows selected from the database. If there are no rows matching the conditions for search the function returns false(boolean);
+
+$sql_code = The actual code written in SQL for that specific task, prepared statements only
+
+$params = An array with the values of the parameters for the prepared statements
+```php
+require_once("sql.class.php"); //Include the specific ".class.php" file
+$sql = new Sql; //Instantiate a new object
+
+$sql->fetch_num($sql_code, $params); //Call a specific method
+```
+
+### fetch_obj method
+Returns an object array with the rows selected from the database. If there are no rows matching the conditions for search the function returns false(boolean);
+
+$sql_code = The actual code written in SQL for that specific task, prepared statements only
+
+$params = An array with the values of the parameters for the prepared statements
+```php
+require_once("sql.class.php"); //Include the specific ".class.php" file
+$sql = new Sql; //Instantiate a new object
+
+$sql->fetch_obj($sql_code, $params); //Call a specific method
+```
+
+### fetch_single method
+Returns an array with a single row selected from the database. If there are no rows matching the conditions for search the function returns false(boolean).
+
+$sql_code = The actual code written in SQL for that specific task, prepared statements only
+
+$params = An array with the values of the parameters for the prepared statements
+
+Note: If there is more than one row that matches your search conditions then only the first row found will be returned
+```php
+require_once("sql.class.php"); //Include the specific ".class.php" file
+$sql = new Sql; //Instantiate a new object
+
+$sql->fetch_single($sql_code, $params); //Call a specific method
+```
+
+### sanitize method
+Returns the input string but sanitized.
+
+Note: It uses the following functions: trim, strip_tags, stripslashes and htmlspecialchars.
+
+```php
+require_once("sql.class.php"); //Include the specific ".class.php" file
+$sql = new Sql; //Instantiate a new object
+
+$sql->sanitize($input); //Call a specific method
+```
