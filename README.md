@@ -106,3 +106,94 @@ $sql = new Sql; //Instantiate a new object
 
 $sql->sanitize($input); //Call a specific method
 ```
+
+## index.class.php
+
+
+### full_index method
+
+Generates a random index with all the printable characters from ASCII (from 33 to 126)
+
+The method takes one parameter which is an integer representing the length of the index.
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->full_index(100); //Generates a index 100 characters long
+```
+
+### letter_index method
+
+Generates a random index with all the letters(both upper and lowercase) from ASCII (from 65 to 90 and from 97 to 122)
+
+The method takes one parameter which is an integer representing the length of the index.
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->letter_index(100); //Generates a index 100 characters long
+```
+### number_index method
+
+Generates a random index with all the numbers from ASCII (from 48 to 57)
+
+The method takes one parameter which is an integer representing the length of the index.
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->number_index(100); //Generates a index 100 characters long
+```
+
+### basic_index method
+
+Generates a random index of letters and numbers from ASCII (from 48 to 57, 65 to 90 and 97 to 122)
+
+The method takes one parameter which is an integer representing the length of the index.
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->basic_index(100); //Generates a index 100 characters long
+```
+
+### rand_low_letter method
+
+Returns a random lower case letter from ASCII(from 97 to 122).
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->rand_low_letter(); //Generates a index 100 characters long
+```
+
+### rand_upper_letter method
+
+Returns a random upper case letter from ASCII(from 65 to 90).
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->rand_upper_letter(); //Generates a index 100 characters long
+```
+
+### rand_number method
+
+Returns a random number from ASCII(from 48 to 57).
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->rand_number(); //Generates a index 100 characters long
+```
+
+### rand_symbol method
+
+Returns a random symbol from ASCII(from 33 to 47, from 58 to 64 and from 123-126).
+
+```php
+require_once("index.class.php"); //Include the specific ".class.php" file
+$index = new Index; //Instantiate a new object
+$index->rand_symbol(); //Generates a index 100 characters long
+```
+
